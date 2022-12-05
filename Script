@@ -1,0 +1,32 @@
+if game.PlaceId == 9585800888 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Plane crash physics Script", HidePremium = false,IntroText = "By Siro Bhai", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Inf cash",
+	Callback = function()
+      		print("button pressed")
+			  while wait() do
+    game:GetService("ReplicatedStorage").GetCash:FireServer()
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Unlock Gamepass Planes",
+	Callback = function()
+      		print("button pressed")
+			  game:GetService("Players").LocalPlayer.PlayerGui.PlaneSpawner.Frame["Block"]:Destroy()
+  	end    
+})
+
+
+
+end
+OrionLib:Init()
